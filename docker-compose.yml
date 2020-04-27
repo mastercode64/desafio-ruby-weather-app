@@ -1,0 +1,14 @@
+version: "2.4"
+services:
+  desafio-ruby:
+    volumes:
+      - ".:/app"
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ruby
+    command: bash -c 'ruby /app/main.rb'
+
+volumes:
+  ruby-volume:
